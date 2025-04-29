@@ -7,6 +7,15 @@
     use MassiveNu
     use config
     use iso_c_binding
+    
+    ! EFTCAMB MOD START: add the main EFTCAMB object to CAMBParams
+    use EFT_def
+    use EFTCAMB_cache
+    use EFTCAMB_stability
+    use EFTCAMB_ReturnToGR
+    use EFTCAMB_main
+    ! EFTCAMB MOD END.
+
     implicit none
 
     integer, parameter :: outNone=1
@@ -188,6 +197,12 @@
         Type(TSourceWindowHolder), allocatable :: SourceWindows(:)
 
         Type(TCustomSourceParams) :: CustomSources
+
+        ! EFTCAMB MOD START: add the main EFTCAMB object to CAMBParams
+        class(TEFTCAMB), allocatable :: EFTCAMB
+        class(TEFTCAMB_parameter_cache), allocatable :: eft_par_cache
+        ! EFTCAMB MOD END.
+        
     contains
     procedure, nopass :: PythonClass => CAMBparams_PythonClass
     procedure, nopass :: SelfPointer => CAMBparams_SelfPointer
@@ -238,7 +253,6 @@
     !Set neutrino hierarchy in the approximate two-eigenstate model (treating two as exactly degenerate, and assuming non-relativistic),
     !or use degenerate mass approximation.
     !omnuh2 is the massive total neutrino density today, omnuh2_sterile is the component of that due to steriles
-    !omnuh2_sterile is interpreted as in the Planck parameter papers
     use MathUtils
     use constants
     class(CAMBparams), intent(inout) :: this

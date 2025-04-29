@@ -44,7 +44,12 @@
         real(dl)   :: helium_redshiftstart  = 5.5_dl
         real(dl)   :: tau_solve_accuracy_boost = 1._dl
         real(dl)   :: timestep_boost =  1._dl
-        real(dl)   :: max_redshift = 50._dl
+        
+    ! EFTCAMB MOD START : 
+        ! Original code line : !real(dl)   :: max_redshift = 50._dl
+        real(dl)   :: max_redshift = 1000._dl
+    ! EFTCAMB MOD END
+        
         real(dl)   :: min_redshift = 0._dl
         !The rest are internal to this module.
         real(dl), private ::  fHe
