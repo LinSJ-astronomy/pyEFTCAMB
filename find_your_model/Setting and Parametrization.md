@@ -20,20 +20,33 @@ There are two methods to set parameters in the EFT structure:
      - $w_0$->**EFTw0** ,  $w_a$->**EFTwa** , $n$->**EFTwn**, $a_t$->**EFTwat** , $w_2$->**EFTw2** , $w_3$->**EFTw3**
 
    * Parameter names of **AltParEFTmodel**:
+   
    **AltParEFTmodel** = 1
    - Flag for different $w_{DE}$ parametrizations (LCDM, wCDM, CPL, JBL, Taylor or TurningPoint): **RPHwDE**. The parameter names are the same with **EFTwDE**, except changeing "EFT" instead of "RPH".
-   - Flag for parametrizations of RPH functions: **RPHHmassPmode, RPHkineticitymodel, RPHbraidingmodel, RPHtensormodel**. Parametrizations name rule see the text below. Their function names are **RPHalphaM, RPHmassP, RPHkineticity, RPHbraiding, RPHtenso** and Latex format are $\alpha^{\rm M},\tilde{M},\alpha^{\rm K},{\alpha^{\rm B}},{\alpha^{\rm T}}$, respectively.
+   - Flag for parametrizations of RPH functions: **RPHHmassPmode, RPHkineticitymodel, RPHbraidingmodel, RPHtensormodel**.
+   
+   Parametrizations name rule see the text below. Their function names are **RPHalphaM, RPHmassP, RPHkineticity, RPHbraiding, RPHtenso**
+
+   and Latex format are $\alpha^{\rm M},\tilde{M},\alpha^{\rm K},{\alpha^{\rm B}},{\alpha^{\rm T}}$, respectively.
+
    **AltParEFTmodel** = 2
+   
    Flags: **OLLambdamodel, OLOmegamodel, OLGamma1model, OLGamma2model, OLGamma3model**
+
    Names: **OLLambda, OLOmega, OLGamma1, OLGamma2, OLGamma3**
+   
    Latex format: $\tilde{\lambda}, \Omega, \gamma_1, \gamma_2, \gamma_3$
 
    **AltParEFTmodel** = 3
+   
    Flags: **OLLambdamodel, OLmassPmodel, OLkineticitymodel, OLbraidingmodel, OLtensormodel**
+   
    Names: **OLLambda, OLmass, OLkineticity, OLbraiding, OLtensor**
+   
    Latex format: $\tilde{\lambda}, \tilde{M}, \alpha^{\rm K}, \alpha^{\rm B}, \alpha^{\rm T}$   
 
    **AltParEFTmodel** = 4
+   
    - Flag for different $w_{DE}$ parametrizations: **EFTwDE**.
 
 
@@ -42,7 +55,7 @@ There are two methods to set parameters in the EFT structure:
 
    
 
-2. **Default Definition**
+3. **Default Definition**
 
    If there is no specific definition for the model, a default name will be used. This name is constructed as "Function name" + index, where "Function name" is defined in the model flag, and the index ranges from 0 to \( N-1 \), where \( N \) is the number of parameters. The LaTeX format will be: \[\text{"FunctionName"}_{index}\]
 
