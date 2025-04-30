@@ -6,9 +6,41 @@ There are two methods to set parameters in the EFT structure:
 
    This method is suitable for specific models and functions in the structure. Parameters have physical significance within their corresponding models.
 
-   For example, consider the designer \( f(R) \) and the background dark energy equation of state.
+   Exact examples will also be provided in the examples folder, and we list their names here.
 
-   Exact examples will be provided in the examples folder, and we will list them here in the future.
+   * Flag for different $w_{DE}$ parametrizations (LCDM, wCDM, CPL, JBL, Taylor or TurningPoint) in PureEFTmode: **EFTwDE**.
+        - **EFTwDE**&emsp;  = 0&emsp; ->&emsp; $w_{DE} = -1$
+        - **EFTwDE**&emsp;  = 1&emsp; ->&emsp; $w_{DE} = w_0$
+        - **EFTwDE**&emsp;  = 2&emsp; ->&emsp; $w_{DE} = w_0 + w_a(1-a)$
+        - **EFTwDE**&emsp;  = 3&emsp; ->&emsp; $w_{DE} = w_0 + w_a (1-a) a^{(n-1)}$
+        - **EFTwDE**&emsp;  = 5&emsp; ->&emsp; $w_{DE} = w_0 + w_a a + \frac12 w_2 a^2 + \frac16 w_3 a^3$
+        - **EFTwDE**&emsp;  = 4&emsp; ->&emsp; $w_{DE} = w_0 + w_a (a_t-a)^2$
+    
+   The parameters above can be fixed with the flags:
+     - $w_0$->**EFTw0** ,  $w_a$->**EFTwa** , $n$->**EFTwn**, $a_t$->**EFTwat** , $w_2$->**EFTw2** , $w_3$->**EFTw3**
+
+   * Parameter names of **AltParEFTmodel**:
+   **AltParEFTmodel** = 1
+   - Flag for different $w_{DE}$ parametrizations (LCDM, wCDM, CPL, JBL, Taylor or TurningPoint): **RPHwDE**. The parameter names are the same with **EFTwDE**, except changeing "EFT" instead of "RPH".
+   - Flag for parametrizations of RPH functions: **RPHHmassPmode, RPHkineticitymodel, RPHbraidingmodel, RPHtensormodel**. Parametrizations name rule see the text below. Their function names are **RPHalphaM, RPHmassP, RPHkineticity, RPHbraiding, RPHtenso** and Latex format are $\alpha^{\rm M},\tilde{M},\alpha^{\rm K},{\alpha^{\rm B}},{\alpha^{\rm T}}$, respectively.
+   **AltParEFTmodel** = 2
+   Flags: **OLLambdamodel, OLOmegamodel, OLGamma1model, OLGamma2model, OLGamma3model**
+   Names: **OLLambda, OLOmega, OLGamma1, OLGamma2, OLGamma3**
+   Latex format: $\tilde{\lambda}, \Omega, \gamma_1, \gamma_2, \gamma_3$
+
+   **AltParEFTmodel** = 3
+   Flags: **OLLambdamodel, OLmassPmodel, OLkineticitymodel, OLbraidingmodel, OLtensormodel**
+   Names: **OLLambda, OLmass, OLkineticity, OLbraiding, OLtensor**
+   Latex format: $\tilde{\lambda}, \tilde{M}, \alpha^{\rm K}, \alpha^{\rm B}, \alpha^{\rm T}$   
+
+   **AltParEFTmodel** = 4
+   - Flag for different $w_{DE}$ parametrizations: **EFTwDE**.
+
+
+
+
+
+   
 
 2. **Default Definition**
 
