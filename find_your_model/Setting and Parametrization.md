@@ -18,33 +18,33 @@ There are two methods to set parameters in the EFT structure:
    \text{"FunctionName"}_{index}
    \]
 
-### Parametraizations for EFT functions
+### Parametrizations for EFT functions
 
-    In the flowchart, you will notice several functions labeled with "Parametrizations." We have implemented a number of parametrization methods within EFTCAMB. The flag numbers and corresponding parameter names are listed here. Still, if there is no specific definition for a parameter name, the default definition will be used.
+In the flowchart, you will notice several functions labeled with "Parametrizations." We have implemented a number of parametrization methods within EFTCAMB. The flag numbers and corresponding parameter names are listed here. Still, if there is no specific definition for a parameter name, the default definition will be used.
 
-   **We use $\Omega$ in pureEFT as an example
+**We use $\Omega$ in pureEFT as an example
+
+   - Flags for $\Omega$ parametrizations: **PureEFTmodelOmega** 
    
-      - Flags for $\Omega$ parametrizations: **PureEFTmodelOmega** 
-      
-      - Zero: **PureEFTmodelOmega** = 0&emsp; ->&emsp; $\Omega(a) = 0$
-      
-      - Constant: **PureEFTmodelOmega** = 1&emsp; ->&emsp; $\Omega(a) = \Omega_0$
-      
-      - Linear: **PureEFTmodelOmega** = 2&emsp; ->&emsp; $\Omega(a) = \Omega_0 a$
-      
-      - Power Law: **PureEFTmodelOmega** = 3&emsp; ->&emsp; $\Omega(a) = \Omega_0 a^s$. Parameter Names: $\Omega_0$-> **EFTOmega0** , $s$ -> **EFTOmegaExp**. Latex format label: ($\Omega_0$, $\Omega_n$).
-      
-      - Exponential: **PureEFTmodelOmega** = 4&emsp; ->&emsp; $\Omega(a) = \exp(\Omega_0 a^s) -1$. Parameter Names: $\Omega_0$-> **EFTOmega0** , $s$ -> **EFTOmegaExp**. Latex format label: ($\Omega_0$, $\Omega_n$).
-      
-      - Taylor series: **PureEFTmodelOmega** = 5&emsp; ->&emsp; 
-      
-      - Pade series: **PureEFTmodelOmega** = 6&emsp; ->&emsp; 
-      
-      - Fourier: **PureEFTmodelOmega** = 7&emsp; ->&emsp; 
-      
-      - Steplog: **PureEFTmodelOmega** = 8&emsp; ->&emsp; 
-      
-      - Spline: **PureEFTmodelOmega** = 9&emsp; ->&emsp;
+   - Zero: **PureEFTmodelOmega** = 0&emsp; ->&emsp; $\Omega(a) = 0$
+   
+   - Constant: **PureEFTmodelOmega** = 1&emsp; ->&emsp; $\Omega(a) = \Omega_0$
+   
+   - Linear: **PureEFTmodelOmega** = 2&emsp; ->&emsp; $\Omega(a) = \Omega_0 a$
+   
+   - Power Law: **PureEFTmodelOmega** = 3&emsp; ->&emsp; $\Omega(a) = \Omega_0 a^s$. Parameter Names: $\Omega_0$-> **EFTOmega0** , $s$ -> **EFTOmegaExp**. Latex format label: ($\Omega_0$, $\Omega_n$).
+   
+   - Exponential: **PureEFTmodelOmega** = 4&emsp; ->&emsp; $\Omega(a) = \exp(\Omega_0 a^s) -1$. Parameter Names: $\Omega_0$-> **EFTOmega0** , $s$ -> **EFTOmegaExp**. Latex format label: ($\Omega_0$, $\Omega_n$).
+   
+   - Taylor series: **PureEFTmodelOmega** = 5&emsp; ->&emsp; 
+   
+   - Pade series: **PureEFTmodelOmega** = 6&emsp; ->&emsp; 
+   
+   - Fourier: **PureEFTmodelOmega** = 7&emsp; ->&emsp; 
+   
+   - Steplog: **PureEFTmodelOmega** = 8&emsp; ->&emsp; 
+   
+   - Spline: **PureEFTmodelOmega** = 9&emsp; ->&emsp;
       
       - Spline5: **PureEFTmodelOmega** = 10&emsp; ->&emsp;
       
