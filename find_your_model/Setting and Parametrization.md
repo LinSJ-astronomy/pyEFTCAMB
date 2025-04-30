@@ -12,17 +12,13 @@ There are two methods to set parameters in the EFT structure:
 
 2. **Default Definition**
 
-   If there is no specific definition for the model, a default name will be used. This name is constructed as "Function name" + index, where "Function name" is defined in the model flag, and the index ranges from 0 to \( N-1 \), where \( N \) is the number of parameters. The LaTeX format will be: 
-
-   \[
-   \text{"FunctionName"}_{index}
-   \]
+   If there is no specific definition for the model, a default name will be used. This name is constructed as "Function name" + index, where "Function name" is defined in the model flag, and the index ranges from 0 to \( N-1 \), where \( N \) is the number of parameters. The LaTeX format will be: \[\text{"FunctionName"}_{index}\]
 
 ### Parametrizations for EFT functions
 
 In the flowchart, you will notice several functions labeled with "Parametrizations." We have implemented a number of parametrization methods within EFTCAMB. The flag numbers and corresponding parameter names are listed here. Still, if there is no specific definition for a parameter name, the default definition will be used.
 
-**We use $\Omega$ in pureEFT as an example
+**We use $\Omega$ in pureEFT as an example**
 
    - Flags for $\Omega$ parametrizations: **PureEFTmodelOmega** 
    
@@ -46,7 +42,7 @@ In the flowchart, you will notice several functions labeled with "Parametrizatio
    
    - Spline: **PureEFTmodelOmega** = 9&emsp; ->&emsp;
       
-      - Spline5: **PureEFTmodelOmega** = 10&emsp; ->&emsp;
+   - Spline5: **PureEFTmodelOmega** = 10&emsp; ->&emsp;
       
-      - Exponential_Parametrization_2_1D: **PureEFTmodelOmega** = 11&emsp; ->&emsp;
+   - Exponential_Parametrization_2_1D: **PureEFTmodelOmega** = 11&emsp; ->&emsp;
     
