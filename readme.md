@@ -19,26 +19,40 @@ bundled package like (https://www.continuum.io/downloads).
 
 A docker with all the required libraries is available at [dockerhub](https://hub.docker.com/r/eftcamb/eftbox/).
 
-### 2. Installation procedure:
+### 2. A Direct Installation Procedure:
 
-To compile the EFTCAMB code issue the following command:
+To get started with the EFTCAMB Python wrapper, you need to first download the entire package using Git:
 
-	make eftcamb
+ 	git clone https://github.com/LinSJ-astronomy/pyEFTCAMB.git
 
-that will result in the executable program ``camb`` that can be run as usual.
+Next, it's recommended(really recommended) to create a new environment using Conda and install the necessary dependencies:
 
-### 3. Examples:
+    conda create -n EFTCAMB_env gfortran lapack numpy python sympy scipy packaging -c conda-forge
 
-The EFTCAMB distribution contains a folder called ``eftcamb_examples`` that can be used to produce some example results.
+**Note for Mac Users:**
+If you're using a Mac with an Apple Silicon chip (e.g., M1, M2), ensure you install the appropriate version of gfortran for your architecture (arm64):
 
-To do so just go to the folder and issue:
+    conda create -n myenv-arm gfortran_osx-arm64 -c conda-forge
 
-	make examples
+You can verify that you're using the correct version of gfortran by executing:
 
-The code will compile EFTCAMB, run it for a set of examples parameter files and plot the resulting spectra.
-All results can be found in the folder ``results``.
+    which gfortran
 
-The example folder is an example of an EFTCAMB parameter package. You can copy the folder and replace the parameter files to produce single purpose packages to easily produce and plot results.
+Finally, navigate to the package directory and install the package in editable mode:
+
+    pip install -e ./pyEFTCAMB
+
+This will allow you to import the Python package camb as usual in your projects.
+
+### 3. Examples and Usage with Cobaya:
+
+The EFTCAMB distribution contains a folder called ``example`` that can be used to produce some example notebooks for brief instruction and sevral example input files of cobaya for sampling and statistical modelling.
+
+To use cobaya, just follow the instruction at:
+
+https://readthedocs.org/projects/cobaya/badge/?version=latest 
+
+The example folder is an example of how to select EFTCAMB flags and set parameters needed from the flags. You can copy the folder and replace the input files to produce single purpose packages to easily produce and plot results.
 
 ### 4. Documentation:
 
@@ -48,7 +62,9 @@ We provide a set of notes that contain all the details and formulas of the EFTCA
     Bin Hu, Marco Raveri, Noemi Frusciante, Alessandra Silvestri, [arXiv:1405.3590 [astro-ph.CO]](http://arxiv.org/abs/1405.3590) 
 
 The EFTCAMB source files documentation is automatically built at any modification of the code and can
-be found at [this link](https://eftcamb.github.io/EFTCAMB/). 
+be found at [this link](https://eftcamb.github.io/EFTCAMB/).
+
+Besides above documentation, there are several flowcharts help you easily find your model flags and set parameters in “flowchart" folder.
  
 ### 5. Citing this work:
 
