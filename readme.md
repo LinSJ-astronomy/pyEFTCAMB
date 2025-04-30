@@ -1,4 +1,5 @@
-EFTCAMB
+pyEFTCAMB(Demo Version)
+Will keep updating.....
 =======
 
 [![Build Status](https://travis-ci.org/EFTCAMB/EFTCAMB.svg?branch=new_features)](https://travis-ci.org/EFTCAMB/EFTCAMB)
