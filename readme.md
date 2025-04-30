@@ -65,7 +65,7 @@ We provide a set of notes that contain all the details and formulas of the EFTCA
 The EFTCAMB source files documentation is automatically built at any modification of the code and can
 be found at [this link](https://eftcamb.github.io/EFTCAMB/).
 
-Besides above documentation, there are several flowcharts help you easily find your model flags and set parameters in “flowchart" folder.
+Besides above documentation, there are several flowchart or markdown files helping you easily find your model flags and set parameters in “find_your_model" folder.
  
 ### 5. Citing this work:
 
